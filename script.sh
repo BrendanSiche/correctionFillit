@@ -1,4 +1,13 @@
 #!/bin/sh
+
+./fillit ./maps/mouli > test.txt
+DIFF=$(diff yeah.txt test.txt) 
+if [ "$DIFF" != "" ] 
+then
+    echo "Oh noes : ("
+else
+    echo ": D"
+fi
 echo "c'est parti"
 while :
 do ./fillit ./maps//valid_0
